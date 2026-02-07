@@ -1,27 +1,12 @@
 
-# ==========================================
-# SMART PROJECT INSPECTOR
-# Advanced Error Scanner
-# ==========================================
-
-# This tool will:
-# 1. Ask project folder
-# 2. Scan only that folder
-# 3. Count Python files
-# 4. Count total lines
-# 5. Detect syntax errors
-# 6. Detect undefined names (typos like lprint)
-# 7. Show file + line info
-
 
 import os
 import py_compile
 import ast
 
 
-# ==========================================
 # GET PROJECT PATH
-# ==========================================
+
 
 def get_project_path():
     """
@@ -45,9 +30,6 @@ def get_project_path():
     return path
 
 
-# ==========================================
-# FIND PY FILES
-# ==========================================
 
 def get_python_files(folder):
     """
@@ -68,10 +50,6 @@ def get_python_files(folder):
     return py_files
 
 
-# ==========================================
-# COUNT LINES
-# ==========================================
-
 def count_lines(file_path):
     """
     Count number of lines in file
@@ -85,9 +63,6 @@ def count_lines(file_path):
         return 0
 
 
-# ==========================================
-# CHECK SYNTAX
-# ==========================================
 
 def check_syntax(file_path):
     """
@@ -108,10 +83,6 @@ def check_syntax(file_path):
             "message": err.msg
         }
 
-
-# ==========================================
-# FIND UNDEFINED NAMES
-# ==========================================
 
 def find_undefined_names(file_path):
     """
@@ -174,9 +145,6 @@ def find_undefined_names(file_path):
     return undefined
 
 
-# ==========================================
-# ANALYZE SINGLE FILE
-# ==========================================
 
 def analyze_file(file_path):
 
@@ -204,9 +172,6 @@ def analyze_file(file_path):
     return results
 
 
-# ==========================================
-# MAIN FUNCTION
-# ==========================================
 
 def main():
 
@@ -275,9 +240,6 @@ def main():
     print("\n===== ✔ Scan Complete =====\n")
 
 
-# ==========================================
-# START PROGRAM
-# ==========================================
 
 if __name__ == "__main__":
     main()
